@@ -37,7 +37,7 @@ class MainActivity : ComponentActivity() {
 }
 
 @Composable
-fun VerticalSpisok() {          // Функція вертикального списку
+fun VerticalScrollableList()  {          // Функція вертикального списку
     val items = listOf(           // Змінна зі значенням списку
         Triple("Сніданок", "Омлет та смажені сосиски з соусом", "8:00"),
         Triple("Обід", "Борщ з галушками та сметаною", "13:00"),
@@ -79,5 +79,5 @@ fun ListItem(item: Triple<String, String, String>){           // функція 
 @Preview(showBackground = true)     // Прев'ю для списку
 @Composable
 fun PreviewVerticalScrollableList() {
-    VerticalSpisok()
+    VerticalScrollableList()
 }
