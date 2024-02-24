@@ -1,5 +1,5 @@
 package ua.edu.lntu.cw3
-
+// Павлик Владислав ІПЗ-31 Контрольна робота №3
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
@@ -29,7 +29,7 @@ class MainActivity : ComponentActivity() {
                     modifier = Modifier.fillMaxSize(),
                     color = MaterialTheme.colorScheme.background
                 ) {
-
+                    VerticalScrollableList()                                                             // Виклик функції
                 }
             }
         }
@@ -37,12 +37,12 @@ class MainActivity : ComponentActivity() {
 }
 
 @Composable
-fun VerticalScrollableList()  {          // Функція вертикального списку
-    val items = listOf(           // Змінна зі значенням списку
+fun VerticalScrollableList() {                                                                          // Функція вертикального списку
+    val items = listOf(                                                                                 // Змінна зі значенням списку
         Triple("Сніданок", "Омлет та смажені сосиски з соусом", "8:00"),
         Triple("Обід", "Борщ з галушками та сметаною", "13:00"),
         Triple("Вечеря", "Баранина в вершковому соусі з гарніром", "17:00")
-        // 3 довільних елемента
+                                                                                                        // 3 довільних елементи
     )
 
     LazyColumn(modifier = Modifier.padding(16.dp)) {
@@ -51,7 +51,7 @@ fun VerticalScrollableList()  {          // Функція вертикальн�
 
 }
 
-// Додамо 3 змінних зі стилями для елементів списку
+                                                                                                            // Додамо 3 змінних зі стилями для елементів списку
 val titleStyle = TextStyle(
     fontSize = 20.sp,
     fontWeight = FontWeight.Bold
@@ -68,15 +68,15 @@ val additionalInfoStyle = TextStyle(
 )
 
 @Composable
-fun ListItem(item: Triple<String, String, String>){           // функція для того щоб визначити як буде відображатися у вертикальному списку
+fun ListItem(item: Triple<String, String, String>) {                                                         // функція для того щоб визначити як буде відображатися
+                                                                                                            // у вертикальному списку
     Text(text = item.first, style = titleStyle)
     Text(text = item.second, style = descriptionStyle)
     Text(text = item.third, style = additionalInfoStyle)
 }
 
 
-
-@Preview(showBackground = true)     // Прев'ю для списку
+@Preview(showBackground = true)                                                                            // Прев'ю для списку
 @Composable
 fun PreviewVerticalScrollableList() {
     VerticalScrollableList()
